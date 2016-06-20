@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * @author tuhing
  * 
- * recursive merge sort - divide and conqure. nlogn - best and worst case
+ * recursive merge sort - divide and conquor. nlogn - best and worst case
  * this requires an aux array for sorting. hence requires more space
  * 2 important methods - merge and sort (sort being recursive)
  * 

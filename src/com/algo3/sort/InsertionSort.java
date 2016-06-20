@@ -53,9 +53,9 @@ public class InsertionSort {
 		//-----prep complete
 		
 		//insertion sort starts here
-		//number is moved from unsorted portion (right) to sorted portion (left) till all nos all sorted
+		//number is moved from unsorted portion (right) to sorted portion (left) till all nos are sorted
 		//i=0 is the start and considered the sorted portion
-		//so in subsiquent passes i=0,1,2 will be sorted. anything right of i=2 will be unsorted
+		//so in subsequent passes i=0,1,2 will be sorted. anything right of i=2 will be unsorted
 		for (int i = 1; i < intary.length; i++) 
 		{
 			

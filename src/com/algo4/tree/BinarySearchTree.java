@@ -3,7 +3,10 @@ package com.algo4.tree;
 import java.util.ArrayDeque;
 import java.util.Scanner;
 
-//check this URL - http://www.theparticle.com/_javadata2.html#Comparing_Objects
+/*
+ * about BST - https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html
+ * check this URL - http://www.theparticle.com/_javadata2.html#Comparing_Objects
+ */
 public class BinarySearchTree {
 	
 	static BSTNode<Integer> root = null;
