@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 /*
  * http://www.sorting-algorithms.com/selection-sort
- * 
+ *  in each iteration find the smallest entry and swap it. This way the array on left of arrow is sorted 
  * Properties
 	Not stable
 	O(1) extra space
-	Θ(n2) comparisons
+	Θ(n^2) comparisons - because 2 nested for loops are run to compare the array
 	Θ(n) swaps
 	Not adaptive
  * 

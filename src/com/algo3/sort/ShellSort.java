@@ -8,7 +8,7 @@ import java.util.Scanner;
  *  Not stable
 	O(1) extra space
 	O(n3/2) time as shown (see below)
-	Adaptive: O(n·lg(n)) time when nearly sorted
+	Adaptive: O(nï¿½lg(n)) time when nearly sorted
 	
 	http://en.wikipedia.org/wiki/Shellsort
 	The method starts by sorting elements far apart from each other and progressively reducing the gap between them. 
@@ -20,8 +20,12 @@ import java.util.Scanner;
 	
 	The worse-case time complexity of shell sort depends on the increment sequence. 
 	For the increments 1 4 13 40 121..., which is what is used here, the time complexity is O(n3/2). 
-	For other increments, time complexity is known to be O(n4/3) and even O(n·lg2(n)). 
+	For other increments, time complexity is known to be O(n4/3) and even O(nï¿½lg2(n)). 
 	Neither tight upper bounds on time complexity nor the best increment sequence are known.
+ *
+ * Used in - embedded systems because of tiny and fixed footprint of code
+ * Average case performance
+ * fast unless array size is huge	
  */
 public class ShellSort {
 

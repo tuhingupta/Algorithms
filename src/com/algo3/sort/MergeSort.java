@@ -4,11 +4,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * @author tuhing
+ * @author Tuhin Gupta
  * 
  * recursive merge sort - divide and conquor. nlogn - best and worst case
  * this requires an aux array for sorting. hence requires more space
  * 2 important methods - merge and sort (sort being recursive)
+ * 	- divide array into two halves
+ *  - recursively sort each half
+ *  - merge two halves
  * 
  * Stable
 Θ(n) extra space for arrays (as shown)

@@ -4,7 +4,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /*
- *   Stable
+ *   The elements on the left of the counter are already sorted. When the element on the counter is picked, it is 
+ *   compared with the element to its left and so on till it reaches its right place on the left of the array.
+ *   
+ *   Stable - because elements only move one position at a time.
 	 O(1) extra space
 	 O(n2) comparisons and swaps
 	 Adaptive: O(n) time when nearly sorted
