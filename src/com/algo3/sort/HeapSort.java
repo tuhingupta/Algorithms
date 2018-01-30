@@ -99,9 +99,11 @@ public class HeapSort {
 		//n = m;
 		//-----prep complete
 		
-		a = new int[m]; //now a[] will represent binary heap array. when each element is added in a loop it will swim/sink to find right place
+		a = new int[m]; //now a[] will represent binary heap array. when each element is added in a loop 
+		//it will swim/sink to find right place
 		//the array is not sorted, but the binary heap is setup in right place. 
-		//if you create a heap tree, with a[1] as head and proceed, you can see all elements in heap order (not sorted though)
+		//if you create a heap tree, with a[1] as head and proceed, 
+		//you can see all elements in heap order (not sorted though)
 		//this loop insert elements from buffer 1 by 1. this takes maxium 1+logN compares
 		for (int i = 1; i < m; i++) {//heapify
 			
