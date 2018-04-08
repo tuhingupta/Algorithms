@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class BinarySearchTree {
 	
-	static BSTNode<Integer> root = null;
+	public static BSTNode<Integer> root = null;
 
 	/**
 	 * @param args

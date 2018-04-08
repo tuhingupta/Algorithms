@@ -2,9 +2,9 @@ package com.algo4.tree;
 
 public class BSTNode<T> implements Comparable<T>{
 	
-	T t;
-	BSTNode<T> leftNode;
-	BSTNode<T> rightNode;
+	public T t;
+	public BSTNode<T> leftNode;
+	public BSTNode<T> rightNode;
 	Integer rank ; //rank is the number of nodes that are smaller to the given node
 	
 	public BSTNode(T val){
