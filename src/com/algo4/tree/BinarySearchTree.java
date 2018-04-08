@@ -38,13 +38,23 @@ public class BinarySearchTree {
 		}
 		
 		
+		//rank
+		rank(root, 0);
+		
 		//traverse Tree
 		System.out.print("in order - ");
 		intrav(root);//this will print sorted list
+		
 		System.out.println("");
 		System.out.print("pre order - ");
-		pretrav(root);
-		breadthFirst(root);
+		//pretrav(root);
+		
+		System.out.println("");
+		System.out.print("bredth first- ");
+		//breadthFirst(root);
+		
+		
+		
 		
 		//search
 		System.out.println(searchTree(root, 42)==null?"not found":"found");
@@ -52,6 +62,9 @@ public class BinarySearchTree {
 
 	}
 	
+	/**
+	 * @param value
+	 */
 	public static void insertNode( Integer value){
 		
 		if(null == root){
@@ -75,11 +88,16 @@ public class BinarySearchTree {
 	
 	//traverse 
 	
+	/**
+	 * @param currentRoot
+	 * @param newNode
+	 * @return
+	 */
 	public static BSTNode<Integer> traverseLastNode(BSTNode<Integer> currentRoot, BSTNode<Integer> newNode){
 		
 		BSTNode<Integer> retNode=null;
 		
-		if(currentRoot.compareTo(newNode.t) > 0 )
+		if(currentRoot.compareTo(newNode.t) > 0 )//left side
 		{
 			
 			if(null != currentRoot.leftNode){
@@ -154,16 +172,22 @@ public class BinarySearchTree {
 	}
 	
 	
-	//depth first traversals
+	//inorder traversals
+	/**
+	 * @param p
+	 */
 	public static void intrav(BSTNode<Integer> p){
         if(p == null)
             return;
         intrav(p.leftNode);
-        System.out.print(p.t+" ");
+        System.out.format("node %d with rank %d \n",p.t, p.rank);
         intrav(p.rightNode);
     }
 	
 	
+	/**
+	 * @param p
+	 */
 	public static void pretrav(BSTNode<Integer> p){
         if(p == null)
             return;
@@ -171,6 +195,43 @@ public class BinarySearchTree {
         pretrav(p.leftNode);
         pretrav(p.rightNode);
     }
+	
+	
+	/**
+	 * @param p
+	 * @param prevRank
+	 */
+	public static void rank(BSTNode<Integer> p, int prevNodeRank){
+		
+//		if(null == p.leftNode)
+//			p.rank = 0;
+		
+		if (null == p )
+			return;
+		
+		rank(p.leftNode, 0);
+		p.rank = new Integer(1) +( p.leftNode == null ?new Integer(0):new Integer(p.leftNode.rank));
+		
+		rank(p.rightNode, p.rank);
+		p.rank = new Integer(1) +( p.leftNode == null ?new Integer(0):new Integer(p.leftNode.rank))+ new Integer(prevNodeRank);
+		
+//		if(null != p.leftNode && p.leftNode.rank == null)
+//			rank(p.leftNode, p.leftNode.rank);
+//		else{
+//			
+//			if(null == p.leftNode)
+//				p.rank = new Integer(0);
+//			else {
+//			
+//				int count = p.leftNode.rank + 1;
+//				p.rank = new Integer(count);
+//			}
+//			
+//		}
+		
+	}
+	
+	
 
 
 }

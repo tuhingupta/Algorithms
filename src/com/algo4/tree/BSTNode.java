@@ -5,6 +5,7 @@ public class BSTNode<T> implements Comparable<T>{
 	T t;
 	BSTNode<T> leftNode;
 	BSTNode<T> rightNode;
+	Integer rank ; //rank is the number of nodes that are smaller to the given node
 	
 	public BSTNode(T val){
 		
