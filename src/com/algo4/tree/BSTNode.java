@@ -6,6 +6,7 @@ public class BSTNode<T> implements Comparable<T>{
 	public BSTNode<T> leftNode;
 	public BSTNode<T> rightNode;
 	Integer rank ; //rank is the number of nodes that are smaller to the given node
+	int hd; //horizontal distance of each node in the tree - this is used for Vertical Order Traversal. See BSTOperations.java
 	
 	public BSTNode(T val){
 		

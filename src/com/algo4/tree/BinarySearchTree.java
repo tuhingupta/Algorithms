@@ -9,12 +9,14 @@ import java.util.Scanner;
  */
 public class BinarySearchTree {
 	
-	public static BSTNode<Integer> root = null;
+	
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		BSTNode<Integer> root = null;
 
 		System.out.println("Enter ints seperated by space: ");
 		Scanner scn = new Scanner(System.in);
@@ -34,7 +36,7 @@ public class BinarySearchTree {
 		//now the whitelist array is complete to be inserted
 		for (int i = 0; i < whitelist.length; i++) {
 			System.out.println("inserting "+whitelist[i]);
-			insertNode(whitelist[i]);
+			root =insertNode(root, whitelist[i]);
 		}
 		
 		
@@ -65,7 +67,7 @@ public class BinarySearchTree {
 	/**
 	 * @param value
 	 */
-	public static void insertNode( Integer value){
+	public static BSTNode<Integer> insertNode(BSTNode<Integer> root, Integer value){
 		
 		if(null == root){
 			root = new BSTNode<Integer>(value);
@@ -84,7 +86,11 @@ public class BinarySearchTree {
 		
 		}//else
 		
+		return root;
+		
 	}
+	
+
 	
 	//traverse 
 	

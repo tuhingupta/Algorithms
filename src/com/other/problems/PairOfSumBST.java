@@ -9,7 +9,7 @@ import com.algo4.tree.BSTNode;
 
 /**
  * @author Tuhin Gupta
- * 
+ * https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/
  * https://leetcode.com/problems/two-sum-iv-input-is-a-bst/solution/
  * Find a pair with given sum in a Balanced BST. 
  * Given a Balanced Binary Search Tree and a target sum, 
@@ -34,6 +34,7 @@ public class PairOfSumBST {
 	public static void main(String[] args) {
 		
 		int[] ary = {12, 5, 13, 17, 6, 9, 4, 7, 11, 2};
+		
 		
 		System.out.println("Enter the number you need to search as sum of 2 nodes in BST");
 		Scanner sc = new Scanner(System.in);
