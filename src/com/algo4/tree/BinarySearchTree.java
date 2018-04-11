@@ -61,6 +61,33 @@ public class BinarySearchTree {
 		//search
 		System.out.println(searchTree(root, 42)==null?"not found":"found");
 		System.out.println(searchTree(root, 33)==null?"not found":"found");
+		
+		//search tree 
+		
+		
+		BSTNode rroot = null;
+		
+		int[] treeAry = {12, 3, 9, 20 , 15 ,7, 16, 2};
+		
+		/*
+		 * treeAry:
+						12
+				 	3/		\20
+				  2/\9	  15/
+				     7/		\16
+				     
+		level order traversal should be = [12, 3, 20, 2, 9, 15, 7, 16]
+				     
+		*/
+		
+		//create tree
+		for (int i = 0; i < treeAry.length; i++) {
+			
+			rroot = BinarySearchTree.insertNode(rroot, treeAry[i]);
+		}	
+		
+		System.out.println(searchTree(rroot, 3)==null?"not found":"found");
+		System.out.println(searchTree(rroot, 17)==null?"not found":"found");
 
 	}
 	
@@ -128,23 +155,25 @@ public class BinarySearchTree {
 		
 	}
 	
-	public static BSTNode<Integer> searchTree(BSTNode<Integer> root, Integer val){
+	public static BSTNode<Integer> searchTree(BSTNode<Integer> node, Integer val){
 		
 		
-		if(null != root && root.compareTo(val)>0){
-			searchTree(root.leftNode, val);
+		
+		if(null != node && node.compareTo(val)>0){
+			return searchTree(node.leftNode, val);
 		}
 		
-		if(null != root && root.compareTo(val)<0){
-			searchTree(root.rightNode, val);
+		if(null != node && node.compareTo(val)<0){
+			return searchTree(node.rightNode, val);
 		}
 		
-		if(null != root && root.compareTo(val)==0){
-			return root;
+		if(null != node && node.compareTo(val)==0){
+			return node;
 		}
 		
 		return null;
 	}
+	
 	
 	//breadth first traversal
 	public static void breadthFirst(BSTNode<Integer> p){

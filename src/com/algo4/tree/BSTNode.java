@@ -18,10 +18,10 @@ public class BSTNode<T> implements Comparable<T>{
 	@Override
 	public int compareTo(T o) {
 		
-		if(t.equals(o))
+		if(this.t.equals(o))
 			return 0;
 		
-		if(t.hashCode() > o.hashCode())
+		if(this.t.hashCode() > o.hashCode())
 			return 1;
 		else return -1;
 		
