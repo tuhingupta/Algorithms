@@ -1,0 +1,12 @@
+#B trees - 2-3 B Tress or 2-3 trees
+
+- 2-3 tress are form of a B tree
+
+- B tree have multiple elements in a node. 
+- children of a b tree are B <= # <= 2B
+- parent of b tree can have B-1<= # <= 2B -1 elements
+- B is the number which in most case is cache line size or the number of elements a h/w cache can hold.
+- http://www.cs.cornell.edu/courses/cs312/2004sp/lectures/lec24.html
+
+- Difference between B & B+ trees - http://www.differencebetween.info/difference-between-b-tree-and-b-plus-tree
+
